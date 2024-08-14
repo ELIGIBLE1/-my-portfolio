@@ -1,0 +1,127 @@
+.containernavbar {
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+    position: static;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: var(--lg-screen);
+    height: 92px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.navbar img {
+    width: 6rem;
+    height: 5.5rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--primary-color);
+    border: 2px solid var(--hover-color);
+    border-radius: 2px;
+    letter-spacing: .1rem;
+}
+
+.navbar ul li :hover {
+    color: rgb(12, 195, 231);
+
+}
+
+/* ================end of nav bar css-=============================== */
+
+/*================== part of service==================*/
+
+.servicecontainer {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    width: var(--lg-screen);
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: -1rem;
+
+}
+
+.service1 {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    object-fit: cover;
+}
+
+.service1 h1 {
+    color: white;
+    margin-top: 18px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.service1 h1 span {
+    color: var(--hover-color);
+}
+
+.service-title {
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    padding: 2rem 1rem;
+}
+
+.service-title img {
+    border-radius: 1.5rem;
+    width: 60%;
+    height: 50%;
+   margin-left: 5rem;
+
+}
+
+.service-title p {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+<section id="container">
+        <div class="servicecontainer">
+            <div class="service1">
+                <h1>ser<span>vi</span>ce</h1>
+                <div class="service-title">
+                    <img src="img/wp0000.jpg" />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+                        non itaque, eligendi rerum soluta officia accusamus animi eaque culpa perferendis,
+                        necessitatibus nam?
+                        Laboriosam nihil veniam voluptatibus minima voluptatem fugiat minus!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, suscipit accusantium! Doloremque
+                        impedit ullam distinctio error perspiciatis sit reprehenderit omnis laudantium eveniet. Ea
+                        officiis aut amet recusandae impedit repellendus voluptatibus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nihil perferendis iure iste unde
+                        eius qui! Quis dignissimos modi itaque asperiores enim? Voluptates placeat ducimus vel sed
+                        reprehenderit, cum ad.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio sint dolore blanditiis facilis
+                        sequi excepturi saepe voluptates error explicabo, quas omnis, mollitia illum quia fugiat, neque
+                        iste est quo placeat!
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
