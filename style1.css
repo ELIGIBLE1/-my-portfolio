@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgba(0, 0, 0, 0.881);
+    --secondary-color: rgb(251, 243, 243);
+    --hover-color: rgb(14, 252, 85);
+}
+
+:root {
+    --lg-screen: 85%;
+    --md-screen: 90%;
+    --sm-screen: 98%;
+}
+
+body {
+    background-color: rgb(52, 84, 97);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.container {
+    width: var(--lg-screen);
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+/* ================end of general css-=============================== */
+/* =====================beginning of experience section ============================= */
+.experiencecontainer {
+    margin-top: 5rem;
+    margin-left: 3em;
+    padding: 1em;
+}
+
+.experiencelinks {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.tablinks {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.tablinks::after {
+    content: '';
+    width: 0;
+    height: 5px;
+    bottom: -8px;
+    background-color: rgb(177, 8, 8);
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.tablinks.activelink::after {
+    width: 100%;
+}
+
+.experiencecontent ul h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.experiencecontent ul {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.experiencecontent ul li {
+    list-style: none;
+}
+
+.experiencecontent {
+    display: none;
+}
+
+.experiencecontent.experiencecontentactive {
+    display: block;
+}
+
+/* =====================beginning of experience section ============================= */
+#aboutme {
+    height: 1000px;
+    width: 100%;
+    background-image: url(exp/pxl2.jpg);
+    background-size: cover;
+    background-position: top-center;
+    position: relative;
+    z-index: 1;
+   
+}
+
+#aboutme::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(58, 100, 250);
+    opacity: .3;
+    z-index: -1;
+}
+#aboutme span{
+font-weight: 500;
+font-size: 35px;
+padding: 1em;
+background-color: antiquewhite;
+border-radius: 8px;
+text-decoration: overline solid crimson ;
+
+}
+.abouttxt {
+    display: block;
+    height: fit-content;
+    margin-top: 6em;
+    margin-left: 4em;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 6px;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+
+}
+
+.abouttxt::after{
+    content: '';
+    background-color: crimson ;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    animation-delay: 2s ease;
+    animation: text-reveal-slide 2s ease forwards;
+}
+@keyframes text-reveal-slide{
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+
+}
+#myexperience h1{
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 1000;
+    font-variant-ligatures: contextual;
+}
+.imghover {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    padding: 2rem;
+    margin-top: 2em;
+}
+
+.now img {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    transition: transform 5s;
+    display: block;
+}
+
+.now:hover img {
+    transform: scale(1.1);
+}
+
+.now {
+    position: relative;
+}
+
+.tutoriol h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: aliceblue;
+    padding: 6px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.tutoriolimg img {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+
+}
+
+.tutoriolimg {
+    text-align: center;
+    padding: .5em;
+    margin-left: 8em;
+    margin-top: 1em;
+}
+
+.tutoriol {
+    background-color: rgb(255, 138, 138);
+    opacity: 0.9;
+    border-radius: 12px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    cursor: pointer;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    overflow: hidden;
+    transition: height 0.9s;
+
+}
+
+.now:hover .tutoriol {
+    height: 100%;
+}

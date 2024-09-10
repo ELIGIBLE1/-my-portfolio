@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+
+
+
+    <section id="aboutme">
+        <span>EAE</span>
+        <div class="abouttxt">
+            <h1>Hello</h1>
+            <h1>my name is </h1>
+            <h1>Eligible asifiwe evode</h1>
+        </div>
+    </section>
+<section id="myexperience">
+    <h1> MY EXPERIENCE</h1>
+    <div class="imghover"> 
+        <div class="now">
+            <img src="exp/awa1.png" alt="img">
+            <div class="tutoriol">
+                <h3>my skills </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae distinctio accusamus dolore
+                    sequi enim, autem quod dignissimos corrupti consectetur tenetur sapiente molestias esse labore
+                    ipsam. Aliquam voluptatibus animi quisquam.</p>
+                <div class="tutoriolimg"><a href="#####"><img src="exp/icon.png" alt="img" /></a></div>
+            </div>
+        </div>
+        <div class="now">
+            <img src="exp/PXL1.jpg" alt="img">
+            <div class="tutoriol">
+                <h3>my experience </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae distinctio accusamus dolore
+                    sequi enim, autem quod dignissimos corrupti consectetur tenetur sapiente molestias esse labore
+                    ipsam. Aliquam voluptatibus animi quisquam.</p>
+                <div class="tutoriolimg"><a href="###"><img src="exp/icon.png" alt="img" /></a></div>
+
+            </div>
+        </div>
+        <div class="now">
+            <img src="exp/vv.jpg" alt="img">
+            <div class="tutoriol">
+                <h3>my eduction </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae distinctio accusamus dolore
+                    sequi enim, autem quod dignissimos corrupti consectetur tenetur sapiente molestias esse labore
+                    ipsam. Aliquam voluptatibus animi quisquam.</p>
+                <div class="tutoriolimg"><a href="###"><img src="exp/icon.png" alt="img" /></a></div>
+            </div>
+        </div>
+
+    </div>
+    </section>
+    <script>
+        var tablink = document.getElementByClassName('tablinks');
+        var experiencecontent = document.getElementsByClassName('experiencecontent');
+
+        function openTab(openTab) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("activelink");
+            }
+            for (experiencecontent of experiencecontent) {
+                experiencecontents.classList.remove("experiencecontentactive");
+            }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(openTab).classList.add("experiencecontentactive");
+        }
+
+    </script>
+</body>
+
+</html>

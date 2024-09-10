@@ -82,16 +82,30 @@ html {
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--primary-color);
-    border: 1px solid var(--hover-color);
     letter-spacing: .0rem;
     padding: 2px;
+    position: relative;
 }
 
-.navbar ul li :hover {
-    color: rgb(12, 195, 231);
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0;
+    background-color: red;
+    position: absolute;
+    bottom: 14px;
+    transition: .2s;
+}
+
+.navbar ul li a:hover::after {
+width: 4rem;
 
 }
 
+.navbar ul li a:hover{
+    color: var(--hover-color);
+}
 /* ================end of nav bar css-=============================== */
 
 /*================== part of about==================*/
@@ -325,13 +339,26 @@ html {
     width: 25rem;
     object-fit: cover;
     padding: 23px;
-
+    cursor: pointer;
+    transition: transform 0.4s;
 }
+.service-title:hover{
+   transform: rotateX(10deg);
+}
+
 
 .design {
     display: flex;
     flex-direction: row;
     gap: .9rem;
+}
+.design img{
+width: 100%;
+height:100%;
+transition: transform 0.5s;
+}
+.design img:hover{
+    transform: scale(1.1);
 }
 
 .design h5 {
@@ -385,6 +412,12 @@ html {
     object-fit: cover;
     border-radius: 6px;
     height: 15rem;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.5s;
+}
+.projectcard:hover img {
+    transform: scale(1.1);
 }
 
 .projectcard h1 {
@@ -624,7 +657,12 @@ html {
     border-radius: 4px;
     display: flex;
     gap: .5em;
+    transition: background 0.5s, transiform 0.2s;
 
+}
+.projectworkoncard:hover{
+    background-color: rgb(30, 30, 29);
+   transform: translateY(-12px);
 }
 
 .text-center {
@@ -678,7 +716,6 @@ html {
     gap: 4rem;
     margin-top: 4em;
 }
-
 .customercard {
     margin: 0 auto;
     width: var(--sm-screen);
@@ -802,7 +839,14 @@ html {
 .footercontainer {
     background-color: rgb(236, 237, 232);
 }
-
+.footercode img{
+    width: 140px;
+    height: 130px;
+    margin-top: 1em;
+}
+.footercode:hover img{
+transform: scale(1.1);
+}
 .footercontainer h5 {
     padding: .5rem;
     font-size: 14px;
@@ -814,9 +858,12 @@ html {
 
 .footeritem {
     display: flex;
-    gap: 3rem;
+    gap: 6rem;
     margin-top: 6rem;
     padding: 3rem;
+}
+.footeritem h5{
+    margin-top: 2em;
 }
 
 .footeritem ul {
@@ -834,9 +881,16 @@ html {
     font-size: 25px;
 
 }
+.footerpragraph div a{
+    font-size: 15px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 200;
+}
 
 .footerpragraph a:hover {
-    color: aliceblue;
+    color: rgb(20, 21, 21);
 
 }
 
