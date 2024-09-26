@@ -50,9 +50,10 @@ html {
     position: fixed;
     top: 0;
     height: auto;
-    margin: 0 auto;
-    margin-top: 1rem;
-    z-index: 123;
+    margin-top: .1rem;
+    width: 100%;
+    z-index: 200;
+    margin-left: -95px;
 
 }
 
@@ -60,7 +61,6 @@ html {
     display: flex;
     gap: 21rem;
     align-items: center;
-    width: var(--sm-screen);
     padding: .2rem;
     justify-content: space-between;
 
@@ -87,25 +87,26 @@ html {
     position: relative;
 }
 
-.navbar ul li a::after{
+.navbar ul li a::after {
     content: '';
     width: 0;
-    height: 3px;
+    height: 4px;
     left: 0;
     background-color: red;
     position: absolute;
-    bottom: 14px;
+    bottom: 1px;
     transition: .2s;
 }
 
 .navbar ul li a:hover::after {
-width: 4rem;
+    width: 4rem;
 
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     color: var(--hover-color);
 }
+
 /* ================end of nav bar css-=============================== */
 
 /*================== part of about==================*/
@@ -342,8 +343,9 @@ width: 4rem;
     cursor: pointer;
     transition: transform 0.4s;
 }
-.service-title:hover{
-   transform: rotateX(10deg);
+
+.service-title:hover {
+    transform: rotateX(10deg);
 }
 
 
@@ -352,12 +354,14 @@ width: 4rem;
     flex-direction: row;
     gap: .9rem;
 }
-.design img{
-width: 100%;
-height:100%;
-transition: transform 0.5s;
+
+.design img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
 }
-.design img:hover{
+
+.design img:hover {
     transform: scale(1.1);
 }
 
@@ -416,6 +420,7 @@ transition: transform 0.5s;
     display: block;
     transition: transform 0.5s;
 }
+
 .projectcard:hover img {
     transform: scale(1.1);
 }
@@ -660,9 +665,10 @@ transition: transform 0.5s;
     transition: background 0.5s, transiform 0.2s;
 
 }
-.projectworkoncard:hover{
+
+.projectworkoncard:hover {
     background-color: rgb(30, 30, 29);
-   transform: translateY(-12px);
+    transform: translateY(-12px);
 }
 
 .text-center {
@@ -716,6 +722,7 @@ transition: transform 0.5s;
     gap: 4rem;
     margin-top: 4em;
 }
+
 .customercard {
     margin: 0 auto;
     width: var(--sm-screen);
@@ -784,7 +791,7 @@ transition: transform 0.5s;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: .5rem;
     margin-top: 2rem;
 }
 
@@ -834,19 +841,112 @@ transition: transform 0.5s;
 }
 
 /*===================address part======================*/
+/*===================part of comment======================*/
+.commentside{
+    display:  flex;
+    gap: 8rem;
+}
+#contactclassic .commentside{
+ justify-content: flex-end;
+ justify-items: flex-end;
+ margin: 0 auto;
+ 
+}
+.commentside h1{
+    color: white;
+    margin-left: 2rem;
+    font-size: 25px;
+    margin-top: 2em;
+   
+}
+form {
+    margin-bottom: 1rem;
+    background-color: #202020;
+    padding: 1em;
+    width: 500px;
+    border-radius: 6px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: wheat;
+
+}
+
+.form-group label {
+    color: white;
+     
+}
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+}
+.form-group input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+.btn-primary:hover {
+    background-color: rgb(64, 215, 242);
+    color: white;
+    transition: 1s;
+}
+
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #218838;
+  }
+
+/*===================end part of comment======================*/
 /*======================= start footer part  =============*/
 
 .footercontainer {
     background-color: rgb(236, 237, 232);
 }
-.footercode img{
+
+.footercode img {
     width: 140px;
     height: 130px;
     margin-top: 1em;
 }
-.footercode:hover img{
-transform: scale(1.1);
+
+.footercode:hover img {
+    transform: scale(1.1);
 }
+
 .footercontainer h5 {
     padding: .5rem;
     font-size: 14px;
@@ -862,7 +962,8 @@ transform: scale(1.1);
     margin-top: 6rem;
     padding: 3rem;
 }
-.footeritem h5{
+
+.footeritem h5 {
     margin-top: 2em;
 }
 
@@ -881,7 +982,8 @@ transform: scale(1.1);
     font-size: 25px;
 
 }
-.footerpragraph div a{
+
+.footerpragraph div a {
     font-size: 15px;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -904,11 +1006,12 @@ transform: scale(1.1);
     gap: 1em;
     padding: 1em;
 }
-.gov a{
+
+.gov a {
     font-size: 28px;
     font-weight: normal;
     text-decoration: none;
-    
+
 }
 
 .footercontact h2 {

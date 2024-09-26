@@ -430,6 +430,21 @@
                 </div>
             </div>
         </div>
+        <div class="commentside">
+<h1>Create your comment</h1>
+<form id="commentForm" name="submit-to-google-sheet">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="comment">Comment:</label>
+  <textarea id="comment" name="comment" rows="4" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+        </div>
     </section>
     <section id="footer">
         <div class="footercontainer">
@@ -440,7 +455,7 @@
                         <img src="img/qrcode_chrome.png" alt="code">
                     </div>
                     <div>
-                       <a href="#####">use the scan code<br> to see more info</a>
+                        <a href="#####">use the scan code<br> to see more info</a>
                     </div>
                 </div>
                 <div class="footerlink">
@@ -485,9 +500,9 @@
                 </div>
             </div>
             <div class="gov">
-              <a href="####"><i class="fa-brands fa-facebook" style="color: rgb(27, 3, 244)"></i></a>
+                <a href="####"><i class="fa-brands fa-facebook" style="color: rgb(27, 3, 244)"></i></a>
                 <a href="####"><i class="fa-brands fa-youtube" style="color: #ca1212;"></i></a>
-               <a href="###"><i class="fa-brands fa-square-instagram" style="color: #eb146a;"></i></a>
+                <a href="###"><i class="fa-brands fa-square-instagram" style="color: #eb146a;"></i></a>
                 <a href="#####"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="###"><i class="fa-brands fa-linkedin" style="color: aqua"></i></a>
                 <a href="#####"><i class="fa-brands fa-tiktok" style="color: #412715;"></i></a>
@@ -497,5 +512,26 @@
         </div>
     </section>
 </body>
+
+<script>
+    document.getElementById("commentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+  
+      // Replace with your own Apps Script Web App URL
+      const url = "https://script.google.com/macros/s/AKfycbxSHDZRCMxszvhCwwfmT2qkXyWilAYjOzB1Ht3kedKLvhVKdTLdgvwJt1T8VWtFvrV0/exec";
+   const form = document.forms['submit-to-google-sheet']
+      fetch(url, {
+        method: "POST",
+        mode: 'no-cors',
+        body: formData
+      }).then(response => {
+        alert("Form submitted successfully!");
+      }).catch(error => {
+        alert("There was an error submitting the form: " + error);
+      });
+    });
+  </script>
 
 </html>
